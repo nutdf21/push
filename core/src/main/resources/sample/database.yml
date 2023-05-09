@@ -1,0 +1,9 @@
+spring:
+  config:
+    import: file:C:/Users/nutdf21/config/database.yml
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+

@@ -1,0 +1,12 @@
+spring:
+  config:
+    import: file:C:/Users/nutdf21/config/database.yml
+  jpa:
+    hibernate:
+      ddl-auto: create  # option type: create, create-drop, update, validate, none
+    properties:
+      hibernate:
+        diarect: org.hibernate.dialect.H2Dialect  # ??? ??? ?? ?????? ??? ?????.
+        show_sql: true  # sql ??? ?????.
+        format_sql: true  # sql query formatting
+        use_sql_comments: true  # sql ??? ????? ?????.
