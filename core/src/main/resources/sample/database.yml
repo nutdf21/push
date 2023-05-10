@@ -1,9 +1,17 @@
-spring:
-  config:
-    import: file:C:/Users/nutdf21/config/database.yml
+spring :
+  datasource :
+    url : jdbc:mariadb://localhost:3306/test
+    username : test
+    password : test
+    driver-class-name: org.mariadb.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update  # option type: create, create-drop, update, validate, none
     properties:
       hibernate:
-
+        #diarect: org.hibernate.dialect.H2Dialect  # ??? ??? ?? ?????? ??? ?????.
+        #dialect: org.hibernate.dialect.MariaDB103Dialect
+        show_sql: true  # sql ??? ?????.
+        format_sql: true  # sql query formatting
+        use_sql_comments: true  # sql ??? ????? ?????.
+    database-platform: org.hibernate.dialect.MariaDB103Dialect
